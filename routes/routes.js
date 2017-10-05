@@ -16,8 +16,10 @@ module.exports = function (app) {
 	
 	//Main routes
 	///////////////////////////
+	//app.get('*', index.all);
 	app.get('/', index.index);
-
+	app.get('/en', index.en);
+	app.get('/fr', index.fr);
 	// auth routes
 	/////////////////////////////
 	app.get('/login', function(req, res) {

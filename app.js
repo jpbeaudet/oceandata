@@ -33,7 +33,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('express-session')({
     secret: '<your_secret>',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true,
+  cookie: { secure: true }
 }));
 app.use(passport.initialize());
 app.use(passport.session());
